@@ -1,0 +1,95 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 0;
+}
+
+h1 { color: #333; margin-bottom: 30px; margin-right:700px }
+
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    width:100%;
+    max-width:600px;
+}
+
+#todo-input {
+    padding: 15px;
+    width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+#add-btn {
+    padding: 12px 20px;
+    background-color: #4c5baf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#todo-list {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+    list-style: none;
+}
+
+.todo-item {
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.todo-text {
+    flex-grow: 1;
+    margin: 0 15px;
+    font-size: 16px;
+    color: #444;
+}
+
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+
+.photo-box {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%; 
+    overflow: hidden;   
+    border: 2px solid #ff4d4d;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    background: none;
+    transition: transform 0.2s;
+    flex-shrink:0;
+}
+
+.photo-box:hover {
+    transform: scale(1.1);
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+} 
