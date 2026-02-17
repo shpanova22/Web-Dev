@@ -1,0 +1,24 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  let ladder = {
+    step: 0,
+    up: function() { 
+      this.step++;
+      return this;
+    },
+    down: function() { 
+      this.step--;
+      return this;
+    },
+    showStep: function() { 
+      alert(this.step);
+      return this;
+    }
+  };
+
+</script>
+
+</html>
