@@ -1,0 +1,25 @@
+<div class="product-card">
+  <img [src]="product().image" [alt]="product().name">
+  <h3>{{ product().name }}</h3>
+  
+  <div class="rating">
+    @for (star of [1, 2, 3, 4, 5]; track star) {
+      <span [class.filled]="star <= product().rating">★</span>
+    }
+    <span class="rating-value">{{ product().rating }}</span>
+  </div>
+
+  <p>{{ product().description }}</p>
+
+  <div class="actions">
+    <button (click)="toggleLike()" [class.liked]="isLiked" class="like-btn">
+      {{ isLiked ? '❤️' : '🤍' }} {{ product().likes }}
+    </button>
+
+    <button (click)="share()" class="share-btn">
+    WhatsApp
+   </button>
+   
+    <button (click)="onDelete()" class="delete-btn"> Delete</button>
+  </div>
+</div>

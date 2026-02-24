@@ -1,0 +1,109 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); 
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; 
+  margin-bottom: 10px;
+}
+
+
+.actions {
+  display: flex;       
+  gap: 12px;           
+  margin-top: 15px;    
+  flex-wrap: wrap;     
+}
+
+
+.actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+
+.share-btn {
+  color: #25D366;
+  border-color: #25D366 !important;
+}
+
+.share-btn:hover {
+  background-color: #25D366;
+  color: white;
+}
+
+
+.like-btn.liked {
+  background-color: #fff0f0;
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+
+.delete-btn {
+  background-color: #ff4d4d !important;
+  color: white;
+  border: none !important;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000 !important;
+}
+
+
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+
+.rating {
+  color: #ccc; 
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.rating .filled {
+  color: #ffcc00; 
+}
+
+.rating-value {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+
+.like-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+
+
