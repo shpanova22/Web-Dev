@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 class="page-title">Albums List</h2>
+
+  <div *ngIf="loading" class="loader-container">
+    <div class="spinner"></div>
+    <p>Loading collection...</p>
+  </div>
+
+  <div *ngIf="!loading " class="album-grid">
+    <div *ngFor="let album of albums" class="album-card">
+      
+      <div class="card-content" [routerLink]="['/albums', album.id]">
+        <span class="album-number">#{{ album.id }}</span>
+        <h3 class="album-title">{{ album.title }}</h3>
+      </div>
+
+      <div class="card-actions">
+        <button class="delete-btn" (click)="deleteAlbum($event, album.id)">
+          <span class="icon">🗑</span> Delete
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>
