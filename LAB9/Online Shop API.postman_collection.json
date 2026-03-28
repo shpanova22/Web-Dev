@@ -1,0 +1,279 @@
+{
+  "info": {
+    "_postman_id": "60241985-7490-4d9b-95ce-e8acebf1d5c3",
+    "name": "Online Shop API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53712607",
+    "_collection_link": "https://go.postman.co/collection/53712607-60241985-7490-4d9b-95ce-e8acebf1d5c3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "GET",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Movies\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Movies\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/categories/",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "categories",
+                    ""
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Thu, 02 Apr 2026 16:02:43 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.14.3"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2855"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">\n        <meta name=\"robots\" content=\"NONE,NOARCHIVE\">\n        <title>403 Forbidden</title>\n        <style>\n    html * { padding:0; margin:0; }\n    body * { padding:10px 20px; }\n    body * * { padding:0; }\n    body { font-family: sans-serif; background:#eee; color:#000; }\n    body>div { border-bottom:1px solid #ddd; }\n    h1 { font-weight:normal; margin-bottom:.4em; }\n    h1 span { font-size:60%; color:#666; font-weight:normal; }\n    #info { background:#f6f6f6; }\n    #info ul { margin: 0.5em 4em; }\n    #info p, #summary p { padding-top:10px; }\n    #summary { background: #ffc; }\n    #explanation { background:#eee; border-bottom: 0px none; }\n  </style>\n    </head>\n    <body>\n        <div id=\"summary\">\n            <h1>Forbidden \n                <span>(403)</span>\n            </h1>\n            <p>CSRF verification failed. Request aborted.</p>\n            <p>You are seeing this message because this site requires a CSRF cookie when submitting forms. This cookie is required for security reasons, to ensure that your browser is not being hijacked by third parties.</p>\n            <p>If you have configured your browser to disable cookies, please re-enable them, at least for this site, or for “same-origin” requests.</p>\n        </div>\n        <div id=\"info\">\n            <h2>Help</h2>\n            <p>Reason given for failure:</p>\n            <pre>\n    CSRF cookie not set.\n    </pre>\n            <p>In general, this can occur when there is a genuine Cross Site Request Forgery, or when\n  \n                <a\n  href=\"https://docs.djangoproject.com/en/6.0/ref/csrf/\">Django’s\n  CSRF mechanism</a> has not been used correctly.  For POST forms, you need to\n  ensure:\n            </p>\n            <ul>\n                <li>Your browser is accepting cookies.</li>\n                <li>The view function passes a \n                    <code>request</code> to the template’s\n                    <a\n    href=\"https://docs.djangoproject.com/en/6.0/topics/templates/#django.template.backends.base.Template.render\">\n                        <code>render</code>\n                    </a>\n    method.\n                </li>\n                <li>In the template, there is a \n                    <code>{% csrf_token\n    %}</code> template tag inside each POST form that\n    targets an internal URL.\n                </li>\n                <li>If you are not using \n                    <code>CsrfViewMiddleware</code>, then you must use\n                    <code>csrf_protect</code> on any views that use the\n                    <code>csrf_token</code>\n    template tag, as well as those that accept the POST data.\n                </li>\n                <li>The form has a valid CSRF token. After logging in in another browser\n    tab or hitting the back button after a login, you may need to reload the\n    page with the form, because the token is rotated after a login.</li>\n            </ul>\n            <p>You’re seeing the help section of this page because you have \n                <code>DEBUG =\n  True</code> in your Django settings file. Change that to\n                <code>False</code>,\n  and only the initial error message will be displayed.\n            </p>\n            <p>You can customize this page using the CSRF_FAILURE_VIEW setting.</p>\n        </div>\n    </body>\n</html>"
+            }
+          ]
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Movies\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/categories/1/",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "categories",
+                    "1",
+                    ""
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Thu, 02 Apr 2026 20:08:05 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.14.3"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2855"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">\n        <meta name=\"robots\" content=\"NONE,NOARCHIVE\">\n        <title>403 Forbidden</title>\n        <style>\n    html * { padding:0; margin:0; }\n    body * { padding:10px 20px; }\n    body * * { padding:0; }\n    body { font-family: sans-serif; background:#eee; color:#000; }\n    body>div { border-bottom:1px solid #ddd; }\n    h1 { font-weight:normal; margin-bottom:.4em; }\n    h1 span { font-size:60%; color:#666; font-weight:normal; }\n    #info { background:#f6f6f6; }\n    #info ul { margin: 0.5em 4em; }\n    #info p, #summary p { padding-top:10px; }\n    #summary { background: #ffc; }\n    #explanation { background:#eee; border-bottom: 0px none; }\n  </style>\n    </head>\n    <body>\n        <div id=\"summary\">\n            <h1>Forbidden \n                <span>(403)</span>\n            </h1>\n            <p>CSRF verification failed. Request aborted.</p>\n            <p>You are seeing this message because this site requires a CSRF cookie when submitting forms. This cookie is required for security reasons, to ensure that your browser is not being hijacked by third parties.</p>\n            <p>If you have configured your browser to disable cookies, please re-enable them, at least for this site, or for “same-origin” requests.</p>\n        </div>\n        <div id=\"info\">\n            <h2>Help</h2>\n            <p>Reason given for failure:</p>\n            <pre>\n    CSRF cookie not set.\n    </pre>\n            <p>In general, this can occur when there is a genuine Cross Site Request Forgery, or when\n  \n                <a\n  href=\"https://docs.djangoproject.com/en/6.0/ref/csrf/\">Django’s\n  CSRF mechanism</a> has not been used correctly.  For POST forms, you need to\n  ensure:\n            </p>\n            <ul>\n                <li>Your browser is accepting cookies.</li>\n                <li>The view function passes a \n                    <code>request</code> to the template’s\n                    <a\n    href=\"https://docs.djangoproject.com/en/6.0/topics/templates/#django.template.backends.base.Template.render\">\n                        <code>render</code>\n                    </a>\n    method.\n                </li>\n                <li>In the template, there is a \n                    <code>{% csrf_token\n    %}</code> template tag inside each POST form that\n    targets an internal URL.\n                </li>\n                <li>If you are not using \n                    <code>CsrfViewMiddleware</code>, then you must use\n                    <code>csrf_protect</code> on any views that use the\n                    <code>csrf_token</code>\n    template tag, as well as those that accept the POST data.\n                </li>\n                <li>The form has a valid CSRF token. After logging in in another browser\n    tab or hitting the back button after a login, you may need to reload the\n    page with the form, because the token is rotated after a login.</li>\n            </ul>\n            <p>You’re seeing the help section of this page because you have \n                <code>DEBUG =\n  True</code> in your Django settings file. Change that to\n                <code>False</code>,\n  and only the initial error message will be displayed.\n            </p>\n            <p>You can customize this page using the CSRF_FAILURE_VIEW setting.</p>\n        </div>\n    </body>\n</html>"
+            }
+          ]
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
